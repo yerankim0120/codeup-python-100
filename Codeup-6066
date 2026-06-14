@@ -1,0 +1,33 @@
+# 2026-06-14 (TIL)
+##problem: Codeup 6066
+정수(int) 3개(a, b, c)를 입력 받아 짝수(even) 홀수(odd) 출력하기
+###My First Code (error)
+```python```
+if a % 2 ==0:
+  print("even")
+else:
+  print("odd")
+---------------분석
+1.입력코드(inout)이 없었음
+2.세 정수(a, b, c)를 검사해야 하는데 a만 검사
+----------------------------**To fix**
+1.여러개의 데이터를 내가 원하는 형태로 한 번에 변환해주는 map()함수를 적용하여 풀기
+--input().split()으로 들어온 문자열들을 map(int, ...)을 사용해 한 번에 정수로 변환
+--------------------------------------------------------------------
+###2번째 시도(compeleted)
+a, b, c=map(int, input().split())
+if a % 2 ==0:
+	print("even")
+else:
+	print("odd")
+if b % 2 ==0:
+	print("even")
+else:
+	print("odd")
+if c % 2 ==0:
+	print("even")
+else:
+	print("odd")
+------------------------------Quick Thoughts
+단순 조건문만 짤 줄 아는게 아니라 더 나아가 여러 데이터를 효율적이게 처리하는 map()같은
+코드를 잘 활용해야겠다.
