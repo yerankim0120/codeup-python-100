@@ -1,0 +1,51 @@
+#2026-06-15
+##Problem:Codeup 6067
+#정수 1개를 입력받아 음(minus)/양(pius) 홀(odd)/짝(even) 판별하여 출력하기
+#음수이면(minus)서 짝수(even)이면, A
+#양수(pius)이면서 짝수(even)이면, C
+#양수(pius)이면서 홀수(odd)이면, D를 출력한다.
+
+###first code (error)
+```python```
+num=int(input())
+if A < 0: #nameError triggered here
+	if A % 2==0:
+		print('A') 
+	else:
+		print('B')
+else:
+	if C % 2 == 0:#nameError triggered here
+		print('C')
+	else:
+		print('D')
+ ------------------------------------
+num이라는 변수로 저장을 했는데 뜬금없는 A가 나와서 error가 떴다. 이름을 통일해 줘야함.
+
+###sceond code(compeleted)
+num=int(input())
+if num < 0: #nameError triggered here
+	if A % 2==0:
+		print('A') 
+	else:
+		print('B'
+else:
+	if num % 2 == 0:#nameError triggered here
+		print('C')
+	else:
+		print('D')
+--------------------------------------
+Quick Thoughts
+KO: 알고 나니 엄청 단순한 오타였지만, 
+컴퓨터랑 소통할 땐 이름 한 글자도 의리를 지켜야 한다는 걸 깨달음 ㅋ 중첩 조건문 구조 자체는 한 번에 잘 짜서 뿌듯함!
+
+EN: A tiny typo can paralyze the whole script. Computers are strict, so I need to be precise with my variable scopes.
+Glad the nesting logic itself was solid on the first try!
+----------------------------------------------------------------------
+Practical Application
+**KO (온라인 쇼핑몰 물류 시스템):
+  예를 들어, 상품 번호가 `양수`면 국내 배송, `음수`면 해외 배송으로 먼저 가른 뒤, 번호가 `짝수`면 신선식품(빠른 배송),
+`홀수`면 일반 의류로 2차 분류하는 자동화 시스템을 만들 때 딱 이 로직이 들어감!
+
+**EN (Smart Logistics Categorization):** This exact nested logic is highly useful for e-commerce sorting systems. For instance,
+we can route packages based on item IDs: `Positive IDs` for domestic shipping and `Negative IDs` for international.
+Inside each route, an `Even/Odd` check can instantly separate perishable goods (express delivery) from apparel (standard delivery).
