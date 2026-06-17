@@ -1,0 +1,36 @@
+#2026-06-18 (TIL)
+##Problem: Codeup 6068
+**Evaluate an integer score and output its correspond grade (A>B>C>D)
+**정수를 입력받아 등급 출력하기.
+
+###first code(Passed)
+num=int(input())
+if 90 <= num <=:
+	print('A')
+```
+else:
+	if 70 <= num < 90:
+		print('B')
+	else:
+		if 40 <= num <70:
+			print('c')
+		else:
+			if 0 <= num < 40:
+				print('D')
+-------------------------------
+이건 너무 불필요하게 복잡하다. 이를 간단하게 하려면 elif를 사용하려 간편하게 한다.
+```
+if num >= 90:
+  print('A')
+elif num >= 70:
+  print('B')
+elif num >= 40:
+  print('C')
+else:
+  print('D')
+```
+-------------------------------
+#appplication
+(온라인게임시스템):경쟁형 온라인 게임에서 유저들의 랭킹 점수에 따라 2000점이상이면 플래티넘(if) 1500점 이상이면 골드(elif)등등
+(Game Tier & Matchmaking System):This logic is identical to how competitive games assign tiers(Bronze,Silver,GOid...)
+based on a playr's MMR.
